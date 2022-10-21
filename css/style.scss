@@ -27,16 +27,50 @@ body {
 
 	background-color: $grey;
 	color: $yellow;
+
+	font-size: 20px;
+	line-height: 24px;
 }
 
 a {
+	position: relative;
+
 	color: $yellow;
 	text-decoration: none;
+
+	font-size: 20px;
+	line-height: 24px;
+}
+
+a::after {
+	content: "";
+	background-image: url(../img/content/dot-yellow.png);
+	position: absolute;
+	left: 50%;
+	bottom: -5px;
+	transition: all 1s;
+	width: 5px;
+	height: 5px;
+}
+
+a:hover::after {
+	background-image: url(../img/content/dot-green.png);
+	transition: all 0.7s;
 }
 
 .active {
 	color: $green-light;
 	border: 2px dashed $green;
+
+	pointer-events: none;
+}
+
+a.active {
+	pointer-events: none;
+
+	&::after {
+		content: none;
+	}
 }
 
 /* Header Start */
@@ -52,13 +86,21 @@ a {
 	color: $yellow;
 
 	&__logo {
-		font-size: 36px;
-		line-height: 40px;
+		font-size: 42px;
+		line-height: 45px;
 		margin-bottom: 5px;
+
+		transition: all 0.7s;
+
+		&:hover {
+			color: $green;
+			transition: all 0.7s;
+		}
 	}
 
 	&__nav {
 		width: 80%;
+
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
@@ -76,6 +118,27 @@ a {
 
 	&__li a {
 		padding: 6px 10px;
+
+		transition: all 0.7s;
+
+		&:hover {
+			color: $green;
+			transition: all 0.7s;
+		}
+	}
+
+	&__social {
+		padding: 6px 10px;
+
+		width: 100%;
+		text-align: right;
+
+		transition: all 0.7s;
+
+		&:hover {
+			color: $green;
+			transition: all 0.7s;
+		}
 	}
 }
 
@@ -84,6 +147,29 @@ a {
 	padding: 50px;
 
 	background-color: $black;
+
+	&__img {
+		position: fixed;
+		right: -1000px;
+		bottom: 0;
+
+		transition: all 2s;
+	}
+
+	&__cat {
+		max-width: 320px;
+		margin-left: 200px;
+	}
+
+	&__displeased-cat {
+		display: block;
+	}
+
+	&__cat:hover > &__img {
+		right: 0;
+
+		transition: all 4s;
+	}
 }
 
 /* Header End */

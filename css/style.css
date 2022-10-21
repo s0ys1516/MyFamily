@@ -20,16 +20,48 @@ body {
   font-family: "Silkscreen";
   background-color: #70616c;
   color: #dace8c;
+  font-size: 20px;
+  line-height: 24px;
 }
 
 a {
+  position: relative;
   color: #dace8c;
   text-decoration: none;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+a::after {
+  content: "";
+  background-image: url(../img/content/dot-yellow.png);
+  position: absolute;
+  left: 50%;
+  bottom: -5px;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  width: 5px;
+  height: 5px;
+}
+
+a:hover::after {
+  background-image: url(../img/content/dot-green.png);
+  -webkit-transition: all 0.7s;
+  transition: all 0.7s;
 }
 
 .active {
   color: #7bd74a;
   border: 2px dashed #289900;
+  pointer-events: none;
+}
+
+a.active {
+  pointer-events: none;
+}
+
+a.active::after {
+  content: none;
 }
 
 /* Header Start */
@@ -49,9 +81,17 @@ a {
 }
 
 .header__logo {
-  font-size: 36px;
-  line-height: 40px;
+  font-size: 42px;
+  line-height: 45px;
   margin-bottom: 5px;
+  -webkit-transition: all 0.7s;
+  transition: all 0.7s;
+}
+
+.header__logo:hover {
+  color: #289900;
+  -webkit-transition: all 0.7s;
+  transition: all 0.7s;
 }
 
 .header__nav {
@@ -83,12 +123,57 @@ a {
 
 .header__li a {
   padding: 6px 10px;
+  -webkit-transition: all 0.7s;
+  transition: all 0.7s;
+}
+
+.header__li a:hover {
+  color: #289900;
+  -webkit-transition: all 0.7s;
+  transition: all 0.7s;
+}
+
+.header__social {
+  padding: 6px 10px;
+  width: 100%;
+  text-align: right;
+  -webkit-transition: all 0.7s;
+  transition: all 0.7s;
+}
+
+.header__social:hover {
+  color: #289900;
+  -webkit-transition: all 0.7s;
+  transition: all 0.7s;
 }
 
 .introduce {
   margin-top: 30px;
   padding: 50px;
   background-color: #30282f;
+}
+
+.introduce__img {
+  position: fixed;
+  right: -1000px;
+  bottom: 0;
+  -webkit-transition: all 2s;
+  transition: all 2s;
+}
+
+.introduce__cat {
+  max-width: 320px;
+  margin-left: 200px;
+}
+
+.introduce__displeased-cat {
+  display: block;
+}
+
+.introduce__cat:hover > .introduce__img {
+  right: 0;
+  -webkit-transition: all 4s;
+  transition: all 4s;
 }
 
 /* Header End */
