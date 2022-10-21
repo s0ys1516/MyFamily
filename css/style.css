@@ -1,0 +1,94 @@
+@font-face {
+  font-family: "Silkscreen";
+  src: url(../fonts/Silkscreen-Regular.woff2);
+  src: url(../fonts/Silkscreen-Regular.woff) format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Silkscreen";
+  src: url(../fonts/Silkscreen-Bold.woff2);
+  src: url(../fonts/Silkscreen-Bold.woff) format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  font-family: "Silkscreen";
+  background-color: #70616c;
+  color: #dace8c;
+}
+
+a {
+  color: #dace8c;
+  text-decoration: none;
+}
+
+.active {
+  color: #7bd74a;
+  border: 2px dashed #289900;
+}
+
+/* Header Start */
+.header {
+  padding: 20px 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #30282f;
+  color: #dace8c;
+}
+
+.header__logo {
+  font-size: 36px;
+  line-height: 40px;
+  margin-bottom: 5px;
+}
+
+.header__nav {
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__ul {
+  gap: 90px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style: none;
+}
+
+.header__li a {
+  padding: 6px 10px;
+}
+
+.introduce {
+  margin-top: 30px;
+  padding: 50px;
+  background-color: #30282f;
+}
+
+/* Header End */
