@@ -165,7 +165,7 @@ a.active {
 		display: block;
 	}
 
-	&__cat:hover > &__img {
+	&:hover > &__img {
 		right: 0;
 
 		transition: all 4s;

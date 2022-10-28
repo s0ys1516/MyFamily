@@ -170,7 +170,7 @@ a.active::after {
   display: block;
 }
 
-.introduce__cat:hover > .introduce__img {
+.introduce:hover > .introduce__img {
   right: 0;
   -webkit-transition: all 4s;
   transition: all 4s;
